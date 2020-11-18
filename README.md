@@ -49,7 +49,7 @@ Para executar o projeto você precisa ter instalado o Node.js em sua máquina, e
 
 ## Contribua
 
-1. Fork it (https://github.com/matheusmaximiano/happy/poker_potter)
+1. Fork it (https://github.com/matheusmaximiano/poker_potter)
 2. Crie uma branch de feature (git checkout -b feature/algumacoisa)
 3. Commit suas alterações (git commit -m 'Tipo: Modificação')
 4. Dê o push para a nova branch (git push origin feature/algumacoisa)
