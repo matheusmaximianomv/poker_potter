@@ -12,7 +12,8 @@ import generateRandomNumber from '../utils/GenerateNumber';
 
 class WizardsController {
   public async show(req: Request, res: Response): Promise<Response> {
-    const { name } = req.params;
+    const { name: nameEncode } = req.params;
+    const name = decodeURIComponent(nameEncode);
 
     const { data: wizards } = await apiWizard.get<IWizard[]>('/');
     const wizard = wizards.find((w) => w.name === name);
