@@ -12,12 +12,10 @@ import generateRandomNumber from '../utils/GenerateNumber';
 
 class WizardsController {
   public async show(req: Request, res: Response): Promise<Response> {
-    const { name: nameEncode } = req.params;
-    const name = decodeURIComponent(nameEncode);
+    const { name } = req.params;
 
     const { data: wizards } = await apiWizard.get<IWizard[]>('/');
     const wizard = wizards.find((w) => w.name === name);
-
     const pokemonIds: number[] = [];
 
     for (let i = 0; i < 6; i++) {
